@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr;
+            grid-gap: 1em;
+            grid-auto-rows: minmax(100px, auto);
+            justify-items:stretch;
+            align-items: stretch;
+        }
+
+.box1{
+align-self: flex-start;
+}
+
+
+.box2{
+align-self: flex-end;
+}
+
+.box3{
+align-self: center;
+}
+
+.box4{
+    align-self:unset;
+}
+
+
+        .wrapper > div{
+    background: #eee;
+   padding: 1em;
+}
+
+
+.wrapper > div:nth-child(odd){
+    background: #ddd;
+}  
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">box 1</div>
+        <div class="box box2">box 2</div>
+        <div class="box box3">box 3</div>
+        <div class="box box4">box 4</div>
+    </div>
+</body>
+</html>
